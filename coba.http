@@ -1,0 +1,53 @@
+### POST /api/v1/register
+POST http://localhost:3000/v1/register
+Content-Type: application/json
+
+{
+  "name": "nanang",
+  "email": "nanang@mail.com",
+  "password": "nanang123",
+  "profileData": {
+    "identityType": "KTP",
+    "identityNumber": "9384756473",
+    "address": "Jakarta"
+  }
+}
+
+### GET /api/v1/users
+GET http://localhost:3000/v1/users
+
+### GET /api/v1/users/:userId
+GET http://localhost:3000/v1/users/1
+
+### POST /api/v1/make-accounts
+POST http://localhost:3000/v1/make-accounts
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "bankName": "Mandiri",
+  "bankAccountNumber": "948239219",
+  "balance": 1000000.00
+}
+
+### GET /api/v1/accounts
+GET http://localhost:3000/v1/accounts
+
+### GET /api/v1/accounts/:accountId
+GET http://localhost:3000/v1/accounts/2
+
+### POST /api/v1/
+POST http://localhost:3000/v1/make-transactions
+Content-Type: application/json
+
+{
+  "sourceAccountId": 3,
+  "destinationAccountId": 2,
+  "amount": 100.00
+}
+
+### GET /api/v1/transactions
+GET http://localhost:3000/v1/transactions
+
+### GET /api/v1/transactions/:transactionId:
+GET http://localhost:3000/v1/transactions/2
